@@ -30,6 +30,5 @@ public class ButtonSpawner : MonoBehaviour
     {
         int randomIndex = Random.Range(0, myObjects.Length);
         GameObject instance = Instantiate(myObjects[randomIndex]);
-
     }
 }
