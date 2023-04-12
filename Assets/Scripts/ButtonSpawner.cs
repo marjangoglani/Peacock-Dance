@@ -6,8 +6,9 @@ public class ButtonSpawner : MonoBehaviour
 {
     public GameObject[] myObjects;
 
-    private float nextActionTime = 0.0f;
-    private float period = 3f;
+    private float nextActionTime = 1f;
+    private float period = 2f;
+    private int spawnCounter = 1;
 
     void Update()
     {
@@ -15,6 +16,13 @@ public class ButtonSpawner : MonoBehaviour
         {
             SpawnItem();
             nextActionTime += period;
+            spawnCounter += 1;
+        }
+
+        if (spawnCounter % 5 == 0 && spawnCounter < 46)
+        {
+            period -= period * 0.15f;
+            spawnCounter += 1;
         }
     }
 
