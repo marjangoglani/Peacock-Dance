@@ -9,7 +9,6 @@ public class ButtonDeleter : MonoBehaviour
         if (other.tag == "Button")
         {
             Destroy(other.gameObject);
-            Debug.Log("collision");
         }
     }
 }
