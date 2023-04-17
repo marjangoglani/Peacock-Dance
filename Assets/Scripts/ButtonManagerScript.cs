@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonManagerScript : MonoBehaviour
 {
+    public Animator animator;
+
     public GameObject RightTarget;
     public GameObject LeftTarget;
     public GameObject UpTarget;
@@ -27,7 +29,16 @@ public class ButtonManagerScript : MonoBehaviour
                 if (distance < 2)
                 {
                     Destroy(RightButton);
+                    animator.Play("right-animation");
                 }
+                else
+                {
+                    animator.Play("fumble-animation");
+                }
+            }
+            else
+            {
+                animator.Play("fumble-animation");
             }
 
         }
@@ -41,7 +52,16 @@ public class ButtonManagerScript : MonoBehaviour
                 if (distance < 2)
                 {
                     Destroy(LeftButton);
+                    animator.Play("left-animation");
                 }
+                else
+                {
+                    animator.Play("fumble-animation");
+                }
+            }
+            else
+            {
+                animator.Play("fumble-animation");
             }
 
         }
@@ -55,7 +75,16 @@ public class ButtonManagerScript : MonoBehaviour
                 if (distance < 2)
                 {
                     Destroy(UpButton);
+                    animator.Play("up-animation");
                 }
+                else
+                {
+                    animator.Play("fumble-animation");
+                }
+            }
+            else
+            {
+                animator.Play("fumble-animation");
             }
 
         }
@@ -69,7 +98,16 @@ public class ButtonManagerScript : MonoBehaviour
                 if (distance < 2)
                 {
                     Destroy(DownButton);
+                    animator.Play("down-animation");
                 }
+                else
+                {
+                    animator.Play("fumble-animation");
+                }
+            }
+            else
+            {
+                animator.Play("fumble-animation");
             }
 
         }

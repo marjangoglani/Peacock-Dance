@@ -508,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb40e28fc87343d2b23c6bffe6198d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1823959023}
   RightTarget: {fileID: 1505791374}
   LeftTarget: {fileID: 2085650715}
   UpTarget: {fileID: 781999956}
