@@ -12,7 +12,7 @@ public class ButtonSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > nextActionTime)
+        if (Time.timeSinceLevelLoad > nextActionTime)
         {
             SpawnItem();
             nextActionTime += period;
