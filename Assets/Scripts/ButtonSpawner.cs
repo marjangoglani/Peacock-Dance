@@ -19,7 +19,7 @@ public class ButtonSpawner : MonoBehaviour
             spawnCounter += 1;
         }
 
-        if (spawnCounter % 5 == 0 && spawnCounter < 46)
+        if (spawnCounter % 5 == 0 && spawnCounter < 30)
         {
             period -= period * 0.15f;
             spawnCounter += 1;
