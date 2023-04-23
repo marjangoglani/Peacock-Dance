@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManagerScript : MonoBehaviour
 {
@@ -17,9 +18,15 @@ public class ButtonManagerScript : MonoBehaviour
     private GameObject DownButton;
 
     private float distance;
+    private int score = 0;
 
     void Update()
     {
+        if (score >= 10)
+        {
+            SceneManager.LoadScene("GameWon");
+        }
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             RightButton = GameObject.Find("RightArrow(Clone)");
@@ -30,6 +37,7 @@ public class ButtonManagerScript : MonoBehaviour
                 {
                     Destroy(RightButton);
                     animator.Play("right-animation");
+                    score += 1;
                 }
                 else
                 {
@@ -53,6 +61,7 @@ public class ButtonManagerScript : MonoBehaviour
                 {
                     Destroy(LeftButton);
                     animator.Play("left-animation");
+                    score += 1;
                 }
                 else
                 {
@@ -76,6 +85,7 @@ public class ButtonManagerScript : MonoBehaviour
                 {
                     Destroy(UpButton);
                     animator.Play("up-animation");
+                    score += 1;
                 }
                 else
                 {
@@ -99,6 +109,7 @@ public class ButtonManagerScript : MonoBehaviour
                 {
                     Destroy(DownButton);
                     animator.Play("down-animation");
+                    score += 1;
                 }
                 else
                 {
